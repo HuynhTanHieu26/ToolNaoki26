@@ -1,0 +1,36 @@
+import os
+import sys
+from colorama import init, Fore, Style
+import pyfiglet
+
+# Khởi tạo colorama
+init(autoreset=True)
+
+# Hàm để xóa màn hình console
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+# Hàm để in ra giao diện chính
+def print_interface():
+    clear_console()
+    
+    # Tạo tiêu đề ASCII art
+    title = pyfiglet.figlet_format("Naoki", font="starwars")
+    print(Fore.MAGENTA + title)    
+    print(Fore.CYAN + "Tool By: Naoki             Phiên Bản: 1.0")
+    print(Fore.WHITE + "――――――――――――――――――――――――――――――――――――――――――――――――")
+    print(Fore.YELLOW + "[♥] Airdrop : ClayTon")
+    print(Fore.YELLOW + "[♥] Youtube : Hướng Dev - Kiếm Tiền Online")
+    print(Fore.YELLOW + "[♥] Tik Tok : https://www.tiktok.com/@huongdev27")
+    print(Fore.WHITE + "――――――――――――――――――――――――――――――――――――――――――――――――")
+    print(Fore.GREEN + "[♥] Tải Nodejs : https://nodejs.org/en")
+    print(Fore.GREEN + "[♥] Link Tool : https://www.mediafire.com/file/9hpmwena6jgmfac/NaokiMoonBixV1.1.zip/file")
+    print(Fore.WHITE + "[♥] Nhập Ngẫu Nhiên Hoặc Enter Để Thoát Tool : ", end="")
+    authorization = input()
+  
+    # Xử lý thêm với authorization nếu cần
+    print(Fore.GREEN + f"[+] Thoát Tool Thành Công")
+
+# Chạy giao diện
+if __name__ == "__main__":
+    print_interface()
